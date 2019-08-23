@@ -115,9 +115,9 @@ DNS服务的配置文件名称为`scan_config.json`
 ```json
 {
     "Base": {
-				"DumpMemory": false,  // 是否开启Profile进行性能记录
-        "BaseDir": ".",				// 数据库文件所在目录
-        "LogLevel": 0,				// 日志等级
+				"DumpMemory": false,        		// 是否开启Profile进行性能记录
+        "BaseDir": ".",									// 数据库文件所在目录
+        "LogLevel": 0,									// 日志等级
         "PublicIP": "40.73.102.177",		// 固定外部IP
         "PortBase": 10000,							// 各服务端口基准端口，如下面本地端口为 10000+337即10337
         "LocalRpcPortOffset": 337,			// 本地RPC端口
@@ -128,31 +128,28 @@ DNS服务的配置文件名称为`scan_config.json`
         "HttpCertPath": "",							// HTTPS 证书路径
         "HttpKeyPath": "",							// HTTPS key 证书路径
         "EnableRest": true,							// 是否开启 REST 服务
-				"ChainRpcAddr": "http://127.0.0.1:20336",	// 主链RPC地址，如果DNS为全节点， RPC地址为本地JSON-RPC地址
-				"ChainRestAddr": "http://127.0.0.1:20334", // 主链REST地址，如果DNS为全节点， REST地址为本地REST地址
-				"DisableChain": false, // 是否启动全节点， 如果关闭全节点功能，上面的主链RPC地址需要配成远端RPC节点的地址
-				"ChannelNetworkId": 1565267317,	// Channel 网络ID
+        "ChainRpcAddr": "http://127.0.0.1:20336",	// 主链RPC地址，如果DNS为全节点， RPC地址为本地JSON-RPC地址
+        "ChainRestAddr": "http://127.0.0.1:20334", // 主链REST地址，如果DNS为全节点， REST地址为本地REST地址
+        "DisableChain": false, 					// 是否启动全节点， 如果关闭全节点功能，上面的主链RPC地址需要配成远端RPC节点的地址
+        "ChannelNetworkId": 1565267317,	// Channel 网络ID
         "ChannelPortOffset": 338,				// Channel网络端口
         "ChannelProtocol": "tcp",				// Channel网络协议
         "ChannelClientType": "rpc",			// Channel请求主链方式
         "ChannelRevealTimeout": "200",	// Channel Reveal Timeout， 目前建议使用200个区块高度
         "ChannelDBPath": "./ChannelDB",	// Channel 数据库路径
-				"DnsNetworkId": 1565511150,			// DNS网络ID	
-				"DnsProtocol": "tcp",						// DNS网络协议
-				"DnsPortOffset": 339,						// DNS端口
+        "DnsNetworkId": 1565511150,			// DNS网络ID	
+        "DnsProtocol": "tcp",						// DNS网络协议
+        "DnsPortOffset": 339,						// DNS端口
+        "DnsGovernDeposit": 1000000000,	// DNS治理抵押
+        "DnsChannelDeposit": 1000000000,// DNS通道抵押
         "TrackerPortOffset": 6369,			// Tracker端口
-				"TrackerPeerValidDuration": "-24h",	// Tracker文件信息失效时间
+        "TrackerPeerValidDuration": "-24h",	// Tracker文件信息失效时间
         "NATProxyServerAddr": "",				// NAT proxy地址， 目前DNS有固定外部IP, 不使用NAT服务
-        "WalletDir": "./wallet.dat",		// 钱包所在路径
-        "WalletPwd": "pwd",							// 钱包密码, 这里暂时方便测试，后续会去掉
-				"DBPath": "DB",									// DNS数据库路径
+        "DBPath": "DB",									// DNS数据库路径
         "DnsNodeMaxNum": 100,						// 保留字段
         "SeedInterval": 10,							// 保留字段
-        "DnsChannelDeposit": 1000000000,	// DNS通道抵押
-        "AutoSetupDNSRegisterEnable": true,	// 是否开启DNS自动注册
+        "AutoSetupDNSRegisterEnable": true,		// 是否开启DNS自动注册
         "AutoSetupDNSChannelsEnable": false,  // 是否自动创建通道
-        "InitDeposit": 1000000000,		// 保留字段
-        "ChannelDeposit": 1000000,		// 保留字段
         "IgnoreConnectDNSAddrs": [		// 忽略连接其他DNS的钱包地址
         ]
     }
@@ -173,11 +170,14 @@ $ nohup ./scan --scanconfig . --config chain_config.json --networkid 1557388198 
 
 命令解释：
 
---scanconfig:  指定DNS配置文件所在的目录为当前目录（或配置文件名，默认是scan_config.json）
+--scanconfig:   指定DNS配置文件所在的目录为当前目录（或配置文件名，默认是scan_config.json）
 
---config: 		 指定全节点服务的配置文件
+--config: 	    指定全节点服务的配置文件
 
---networkid:   主链P2P网络ID
+--networkid:    主链P2P网络ID
 
---loglevel:        日志文件等级
+--loglevel:     日志文件等级
 
+--wallet, -w:   钱包文件目录，默认为 ./wallet.dat
+
+--password, -p: 钱包密码
