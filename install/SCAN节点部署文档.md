@@ -142,14 +142,13 @@ DNS服务的配置文件名称为`scan_config.json`
         "DnsPortOffset": 339,						// DNS端口
         "DnsGovernDeposit": 1000000000,	// DNS治理抵押
         "DnsChannelDeposit": 1000000000,// DNS通道抵押
+        "AutoSetupDNSRegisterEnable": true,		// 是否开启DNS自动注册
         "TrackerPortOffset": 6369,			// Tracker端口
         "TrackerPeerValidDuration": "-24h",	// Tracker文件信息失效时间
         "NATProxyServerAddr": "",				// NAT proxy地址， 目前DNS有固定外部IP, 不使用NAT服务
         "DBPath": "DB",									// DNS数据库路径
         "DnsNodeMaxNum": 100,						// 保留字段
         "SeedInterval": 10,							// 保留字段
-        "AutoSetupDNSRegisterEnable": true,		// 是否开启DNS自动注册
-        "AutoSetupDNSChannelsEnable": false,  // 是否自动创建通道
         "IgnoreConnectDNSAddrs": [		// 忽略连接其他DNS的钱包地址
         ]
     }
@@ -165,7 +164,6 @@ DNS服务的配置文件名称为`scan_config.json`
 ```shell
 $ nohup ./scan --scanconfig . --config chain_config.json --networkid 1557388198 --loglevel=1 -p pwd >/dev/null 2>nohup.log &
 ```
-
 
 
 命令解释：
