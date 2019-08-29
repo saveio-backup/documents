@@ -140,9 +140,10 @@ DNS服务的配置文件名称为`scan_config.json`
         "DnsNetworkId": 1565511150,			// DNS网络ID	
         "DnsProtocol": "tcp",						// DNS网络协议
         "DnsPortOffset": 339,						// DNS端口
-        "DnsGovernDeposit": 1000000000,	// DNS治理抵押
+        "DnsGovernDeposit": 1000000000,	// DNS治理抵押，如果默认钱包余额充足，会自动抵押；否则，可使用命令手动抵押.
         "DnsChannelDeposit": 1000000000,// DNS通道抵押
         "AutoSetupDNSRegisterEnable": true,		// 是否开启DNS自动注册
+        "TrackerProtocol": "udp",
         "TrackerPortOffset": 6369,			// Tracker端口
         "TrackerPeerValidDuration": "-24h",	// Tracker文件信息失效时间
         "NATProxyServerAddr": "",				// NAT proxy地址， 目前DNS有固定外部IP, 不使用NAT服务
