@@ -150,11 +150,24 @@ DNS服务的配置文件名称为`scan_config.json`
         "DBPath": "DB",									// DNS数据库路径
         "DnsNodeMaxNum": 100,						// 保留字段
         "SeedInterval": 10,							// 保留字段
+        "DnsChannelDeposit": 1000000000,	// DNS通道抵押的资产数量
+        "AutoSetupDNSRegisterEnable": true,	// 是否开启DNS自动注册
+        "AutoSetupDNSChannelsEnable": false,  // 是否自动创建通道
+        "InitDeposit": 1000000000,		// 保留字段
+        "ChannelDeposit": 1000000,		// 保留字段
         "IgnoreConnectDNSAddrs": [		// 忽略连接其他DNS的钱包地址
         ]
     }
 }
 ```
+
+
+
+| 配置项     |                                                              |
+| ---------- | ------------------------------------------------------------ |
+| 可自定义   | PublicIP (公网IP)<br>DumpMemory(是否允许分析性能)<br>LogLevel (日志等级)<br>ChainRestAddrs (全节点Rest地址)<br>ChainRpcAddrs (全节点RPC地址)<br>DisableChain (是否关闭全节点服务)<br>TrackerPeerValidDuration (Tracker文件信息失效时间) |
+| 建议不改动 | BaseDir (工作目录)<br>LogPath (日志文件夹名称) <br>PortBase (P2P基端口) <br>***PortOffset (相关服务端口偏移)<br>ChannelDBPath (Channel数据库路径)<br>ChannelClientType (Channel调用主链接口方式) <br>WalletDir (钱包所在路径)<br>DBPath (DNS数据库路径)<br>AutoSetupDNSRegisterEnable (自动注册DNS) <br>IgnoreConnectDNSAddrs (忽略其他DNS) |
+| 不能修改   | ChannelNetworkId (Channel网络ID) <br>ChannelProtocol (Channel网络协议) <br>ChannelRevealTimeout (开关通道设置的超时) <br>ChannelSettleTimeout (通道结算的超时) <br>DnsNetworkId (DNS网络ID) <br/>DnsProtocol (DNS网络协议) <br>NATProxyServerAddr (DNS目前不设置NAT) |
 
 
 

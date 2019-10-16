@@ -40,7 +40,7 @@ $ make
    	"InnerIP": 在云服务器上，会有内网IP和外网IP之分，InnerIP表示内网；
     "PortTimeout":7200, 当没有数据交互时，porter为某个代理机器保留端口的最大时长，单位是秒；
 	  "PublicIP": "40.73.103.72",在云服务器上，会有内网IP和外网IP之分，PublicIP表示外网；
-  	"RandomPortBegin": 30000, 随机端口的其实端口值；
+  	"RandomPortBegin": 30000, 随机端口的起始端口值；
   	"RandomPortRange": 10000, 随机端口的范围宽度；例如当前的值为10000，则随机端口的范围是[30000, 30000+10000];
 	  "TPort":6007, TCP协议监听端口;
 		"UPort":6008, UDP协议监听端口；
@@ -53,6 +53,13 @@ $ make
 	}
 }
 ```
+
+
+
+| 配置项   |                                                              |
+| -------- | ------------------------------------------------------------ |
+| 可自定义 | InterfaceName (网卡别名)<br>InnerIP (内网IP)<br>PortTimeout (保留端口的最大时长)<br>PublicIP (公网IP)<br>RandomPortBegin (随机端口的起始)<br>RandomPortRange (随机端口的范围)<br>TPort (TCP协议监听端口)<br>UPort (UDP协议监听端口)<br>KPort (KCP 协议监听端口)<br>QPort (QUIC协议监听端口)<br>LogDir (log日志文件目录)<br>LogLevel (日志等级)<br>PorterDBPath (本地数据库) |
+| 不能修改 | NetworkID (网络ID)                                           |
 
 
 

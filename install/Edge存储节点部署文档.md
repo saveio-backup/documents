@@ -83,6 +83,12 @@ edge节点的配置文件为`config.json`， 具体含义
 
 
 
+| 配置项     |                                                              |
+| ---------- | ------------------------------------------------------------ |
+| 可自定义   | PublicIP (公网IP)<br>LogLevel (日志等级)<br>BlockConfirm (等待区块确认的区块数)<br>BlockDelay (等待区块确认的区块数)<br>ChainRestAddrs (全节点Rest地址)<br>ChainRpcAddrs (全节点RPC地址)<br>NATProxyServerAddrs (NAT代理节点地址)<br>DnsNodeMaxNum (连接的最多的DNS数量)<br>SeedInterval (提交下载的文件信息时间间隔)<br>Trackers (连接的Tracker服务器地址)<br>FsFileRoot (下载文件所在路径)<br>FsGCPeriod (GC回收时间间隔)<br>EnableBackup (是否开启备份任务线程，客户端无此配置) |
+| 建议不改动 | BaseDir (文档目录)<br>LogPath (日志文件夹名称) <br>PortBase (P2P基端口) <br>***PortOffset (相关服务端口偏移)<br>DBPath (数据库路径)<br>ChannelClientType (通道调用主链接口方式) <br>WalletDir (钱包所在路径) |
+| 不能修改   | BlockTime (出块时间) <br>NetworkId (网络ID) <br>ChannelProtocol (通道网络协议) <br>ChannelRevealTimeout(开关通道设置的超时) <br>ChannelSettleTimeout (通道结算的超时) <br>DspProtocol (dsp网络协议) <br/>FsType (FS底层存储方式) |
+
 
 
 #### 五、启动Edge
