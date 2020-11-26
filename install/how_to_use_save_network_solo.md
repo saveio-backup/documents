@@ -25,7 +25,7 @@
 | max           | b61f97e8140f5c4f5ceb3f3d4daa428a7e66c682 | FS存储         |
 | edge          | 268d05a5ef5f9f5975b5b7fbafa7465f4ae6d15d | DSP客户端      |
 | dsp-go-sdk    | caf2508b922289a91a184a25d4ed8987f8462bc7 | DSP SDK        |
-| porter        | 4ddcc84c13d04762d2fd21eacc1bd3c81d034790 | NAT代理        |
+| porter        | 1ffe37af183b8161f93ed83f86163e1eebbe1239 | NAT代理        |
 
 
 
