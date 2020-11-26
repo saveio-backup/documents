@@ -816,5 +816,5 @@ $ ./edge dns registerheader --header="oni" --desc="oni" --ttl=100000
 
 
 
-#### 启动Seeker
+#### 重启Seeker
 
