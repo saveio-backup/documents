@@ -67,6 +67,7 @@ Create account successfully.
 #### 启动
 
 ```shell
+$ cd ~/go/src/github.com/saveio/themis
 $ go run main.go --testmode -p pwd
 ```
 
@@ -79,6 +80,7 @@ $ go run main.go --testmode -p pwd
 另起新的窗口
 
 ```shell
+$ cd ~/go/src/github.com/saveio/themis
 $ go run main.go asset balance 1
 ```
 
@@ -150,6 +152,7 @@ Tip:
 等待1个区块高度，查询是否到账
 
 ```shell
+$ cd ~/go/src/github.com/saveio/themis
 $ go run main.go asset balance AYFzNEzNH4KCGw7XS9N9C9oD6VbYobK5f7
 ```
 
@@ -273,6 +276,7 @@ $ vim scan_config.json
 #### 启动
 
 ```shell
+$ cd ~/go/src/github.com/saveio/scan
 $ ./scan -p pwd
 ```
 
@@ -283,6 +287,7 @@ $ ./scan -p pwd
 > 如果查询为空，则重启scan节点，重试几次
 
 ```shell
+$ cd ~/go/src/github.com/saveio/scan
 $ ./scan dns getRegInfo --all
 ```
 
@@ -302,6 +307,7 @@ Index 0:
 
 
 ```shell
+$ cd ~/go/src/github.com/saveio/scan
 $ ./scan dns getHostInfo --all
 ```
 
@@ -354,6 +360,7 @@ $ ln -s ../edge .
 #### 创建钱包并获取测试币
 
 ```shell
+$ cd ~/go/src/github.com/saveio/edge/node1
 $ ./edge account add -d
 ```
 
@@ -395,6 +402,7 @@ Tip:
 等一个区块高度后，查询是否到账
 
 ```shell
+$ cd ~/go/src/github.com/saveio/themis
 $ go run main.go asset balance AHgGsdkCyxFpy3uV5kxQ9ChHZLy41FmSw2
 ```
 
@@ -492,6 +500,7 @@ $ vim config.json
 #### 启动存储节点
 
 ```
+$ cd ~/go/src/github.com/saveio/edge/node1
 $ ./edge --config=config.json -p pwd
 ```
 
@@ -502,6 +511,7 @@ $ ./edge --config=config.json -p pwd
 > 另起窗口
 
 ```shell
+$ cd ~/go/src/github.com/saveio/edge/node1
 $ ./edge node register --nodeAddr=tcp://127.0.0.1:10131 --volume=1073741824 --serviceTime=8760
 ```
 
@@ -518,6 +528,7 @@ $ ./edge node register --nodeAddr=tcp://127.0.0.1:10131 --volume=1073741824 --se
 #### 查询是否注册成功
 
 ```shell
+$ cd ~/go/src/github.com/saveio/edge/node1
 $ ./edge node query --walletAddr=AHgGsdkCyxFpy3uV5kxQ9ChHZLy41FmSw2
 ```
 
@@ -542,6 +553,7 @@ $ ./edge node query --walletAddr=AHgGsdkCyxFpy3uV5kxQ9ChHZLy41FmSw2
 #### 创建存储节点的扇区(1TB)
 
 ```shell
+$ cd ~/go/src/github.com/saveio/edge/node1
 $ ./edge sector create --sectorId=1 --proveLevel=1 --sectorSize=1073741824
 ```
 
@@ -558,6 +570,7 @@ $ ./edge sector create --sectorId=1 --proveLevel=1 --sectorSize=1073741824
 #### 查询是否注册成功
 
 ```shell
+$ cd ~/go/src/github.com/saveio/edge/node1
 $ ./edge sector getsector --sectorId=1
 ```
 
@@ -584,6 +597,7 @@ $ ./edge sector getsector --sectorId=1
 #### 与DNS节点建立支付通道
 
 ```shell
+$ cd ~/go/src/github.com/saveio/edge/node1
 $ ./edge channel open --partnerAddr=AYFzNEzNH4KCGw7XS9N9C9oD6VbYobK5f7 --amount=10000
 ```
 
@@ -600,6 +614,7 @@ $ ./edge channel open --partnerAddr=AYFzNEzNH4KCGw7XS9N9C9oD6VbYobK5f7 --amount=
 再查询一次
 
 ```shell
+$ cd ~/go/src/github.com/saveio/edge/node1
 $ ./edge channel list
 ```
 
@@ -673,7 +688,7 @@ $ mkdir client1
 #### 链接`edge`
 
 ```shell
-$ cd client1
+$ cd ~/go/src/github.com/saveio/edge/client1
 $ ln -s ../edge .
 ```
 
@@ -766,6 +781,7 @@ $ vim config.json
 
 
 ```shell
+$ cd ~/go/src/github.com/saveio/edge/client1
 $ ./edge account add -d
 ```
 
@@ -789,6 +805,7 @@ Create account successfully.
 #### 启动
 
 ```shell
+$ cd ~/go/src/github.com/saveio/edge/client1
 $ ./edge --config=config.json -p pwd
 ```
 
@@ -801,6 +818,7 @@ $ ./edge --config=config.json -p pwd
 
 
 ```shell
+$ cd ~/go/src/github.com/saveio/edge/client1
 $ ./edge dns registerheader --header="oni" --desc="oni" --ttl=100000
 ```
 
