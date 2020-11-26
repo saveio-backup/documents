@@ -596,6 +596,26 @@ $ ./edge sector getsector --sectorId=1
 
 #### 与DNS节点建立支付通道
 
+查询通道是否同步完成
+
+```shell
+$ cd ~/go/src/github.com/saveio/edge/node1
+$ ./edge channel initprogress
+```
+
+```json
+输出
+
+{
+   "Progress": 1,
+   "Start": 2021,
+   "End": 2024,
+   "Now": 2024
+}
+```
+
+`progress` 为1的时候才可以开通道
+
 ```shell
 $ cd ~/go/src/github.com/saveio/edge/node1
 $ ./edge channel open --partnerAddr=AYFzNEzNH4KCGw7XS9N9C9oD6VbYobK5f7 --amount=10000
