@@ -47,7 +47,7 @@
 
 ```shell
 $ cd ~/go/src/github.com/saveio/themis
-$ go run main.go accound add -d
+$ go run main.go account add -d
 ```
 
 ```
@@ -225,7 +225,7 @@ $ vim scan_config.json
 | 配置项                     | 说明                                                         | 示例                   |
 | -------------------------- | ------------------------------------------------------------ | ---------------------- |
 | DumpMemory                 | 是否开启Profile进行性能记录                                  | false                  |
-| BaseDir                    | 数据库文件所在目录                                           | .                      |
+| BaseDir                    | 数据库文件所在目录(windows系统，请修改此项)                                           | .                      |
 | LogLevel                   | 日志等级                                                     | 0                      |
 | PublicIP                   | 固定外部IP                                                   | 127.0.0.1              |
 | IntranetIP                 | 内网IP                                                       | 127.0.0.1              |
@@ -279,6 +279,8 @@ $ ./scan -p pwd
 
 
 #### 查询节点是否成功注册（可跳过)
+
+> 如果查询为空，则重启scan节点，重试几次
 
 ```shell
 $ ./scan dns getRegInfo --all
@@ -410,6 +412,7 @@ BalanceOf:AHgGsdkCyxFpy3uV5kxQ9ChHZLy41FmSw2
 #### 配置文件
 
 ```shell
+$ cd ~/go/src/github.com/saveio/edge/node1
 $ vim config.json
 ```
 
@@ -679,6 +682,7 @@ $ ln -s ../edge .
 #### 配置文件
 
 ```shell
+$ cd ~/go/src/github.com/saveio/edge/client1
 $ vim config.json
 ```
 
