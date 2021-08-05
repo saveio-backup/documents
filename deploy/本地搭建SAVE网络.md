@@ -13,7 +13,7 @@
 - 使用 `Go Module` ， 修改以下配置
 
 ```bash
-$ git config --global url."http://10.0.1.228:3000/saveio".insteadOf  http://10.0.1.228:3000/saveio
+$ git config --global url."http://10.0.1.228:3000/saveio".insteadOf  https://github.com/saveio
 $ go env -w GONOPROXY=github.com/saveio
 $ go env -w GONOSUMDB=github.com/saveio
 $ go env -w GOPRIVATE="github.com/saveio"
