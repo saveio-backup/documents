@@ -1,0 +1,334 @@
+{
+	"info": {
+		"_postman_id": "c3bb8c8a-55bc-4d4a-8069-c1afe8805ed8",
+		"name": "State channels",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get_fee",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"connection": true
+				},
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{scan}}/api/v1/channel/fee",
+					"protocol": "http",
+					"host": [
+						"{{scan}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"channel",
+						"fee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{scan}}/api/v1/channel/list",
+					"protocol": "http",
+					"host": [
+						"{{scan}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"channel",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post_open",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"PartnerAddr\": \"AThVUVzJQ4bpg23Z8LA591MUJnsaUxN3ZV\",\n    \"Password\": \"a1159e9df3670d549d04524532629f5477ceb7deec9b45e47e8c009506ecb2c8\"\n}"
+				},
+				"url": {
+					"raw": "http://{{scan}}/api/v1/channel/open",
+					"protocol": "http",
+					"host": [
+						"{{scan}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"channel",
+						"open"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post_fee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"FlatFormat\": \"99999.123456789123456\",\n    \"ProportionalFormat\":\"0.123456789123456\",\n    \"Password\": \"a1159e9df3670d549d04524532629f5477ceb7deec9b45e47e8c009506ecb2c8\"\n}",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{scan}}/api/v1/channel/fee",
+					"protocol": "http",
+					"host": [
+						"{{scan}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"channel",
+						"fee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post_close",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"PartnerAddr\": \"ASSh2LoLpsdHnTyhKcQebCcAKWjzDZpJrr\",\n    \"Password\": \"pwd\"\n}"
+				},
+				"url": {
+					"raw": "http://{{scan}}/api/v1/channel/close",
+					"protocol": "http",
+					"host": [
+						"{{scan}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"channel",
+						"close"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post_deposit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"PartnerAddr\": \"AXzKnVKzMVD2PkocyeXjiqvjZ8kSb6RJ5y\",\n    \"Deposit\": \"5.001\",\n    \"Password\": \"a1159e9df3670d549d04524532629f5477ceb7deec9b45e47e8c009506ecb2c8\"\n}"
+				},
+				"url": {
+					"raw": "http://{{scan}}/api/v1/channel/deposit",
+					"protocol": "http",
+					"host": [
+						"{{scan}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"channel",
+						"deposit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_deposit",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"connection": true
+				},
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{scan}}/api/v1/channel/deposit/ASSh2LoLpsdHnTyhKcQebCcAKWjzDZpJrr",
+					"protocol": "http",
+					"host": [
+						"{{scan}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"channel",
+						"deposit",
+						"ASSh2LoLpsdHnTyhKcQebCcAKWjzDZpJrr"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post_withdraw",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"PartnerAddr\": \"AXzKnVKzMVD2PkocyeXjiqvjZ8kSb6RJ5y\",\n    \"Amount\": \"100\",\n    \"Password\": \"a1159e9df3670d549d04524532629f5477ceb7deec9b45e47e8c009506ecb2c8\"\n}",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{scan}}/api/v1/channel/withdraw",
+					"protocol": "http",
+					"host": [
+						"{{scan}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"channel",
+						"withdraw"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edge_transfer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"To\":\"AYwsWgvraBjhyd8cy7kDk5WY9hzUjAYPET\",\n    \"Amount\": \"0\",\n    \"PaymentId\":\"32123124\",\n    \"Password\": \"a1159e9df3670d549d04524532629f5477ceb7deec9b45e47e8c009506ecb2c8\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:10134/api/v1/channel/transfer",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "10134",
+					"path": [
+						"api",
+						"v1",
+						"channel",
+						"transfer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_list_by_partner_addr",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{scan}}/api/v1/channel/list/AXzKnVKzMVD2PkocyeXjiqvjZ8kSb6RJ5y",
+					"protocol": "http",
+					"host": [
+						"{{scan}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"channel",
+						"list",
+						"AXzKnVKzMVD2PkocyeXjiqvjZ8kSb6RJ5y"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_fee_by_channel_id",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"connection": true
+				},
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{scan}}/api/v1/channel/fee/108",
+					"protocol": "http",
+					"host": [
+						"{{scan}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"channel",
+						"fee",
+						"108"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
